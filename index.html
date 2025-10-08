@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengubah Stigma 'Anak Nakal' Menjadi 'Anak Penuh Inisiatif'</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --------------------------------- */
+        /* 1. DEFINISI VARIABEL DAN RESET DASAR */
+        /* --------------------------------- */
+        :root {
+            --color-primary: #007bff; /* Biru Cerah */
+            --color-secondary: #2c3e50; /* Biru Tua */
+            --color-accent: #28a745; /* Hijau (untuk langkah) */
+            --color-text: #343a40;
+            --color-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 40px 20px;
+            background-color: var(--color-light);
+            color: var(--color-text);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        /* --------------------------------- */
+        /* 2. STYLING KONTEN UTAMA & TIPOGRAFI */
+        /* --------------------------------- */
+        .article-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease-in-out;
+        }
+        
+        h1 {
+            color: var(--color-secondary);
+            font-size: 2.4em; /* Lebih besar */
+            font-weight: 800; /* Lebih tebal */
+            text-align: center;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--color-primary);
+            font-size: 1.6em;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 25px;
+            border-left: 6px solid var(--color-primary);
+            padding-left: 18px;
+        }
+        
+        p {
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+        
+        strong {
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+
+        /* --------------------------------- */
+        /* 3. STYLING KOTAK POIN (GRID CARD) */
+        /* --------------------------------- */
+        .point-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Membagi dua kolom */
+            gap: 20px; /* Jarak antar kotak */
+            padding: 20px 0;
+        }
+
+        .point-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Bayangan sangat halus */
+            transition: all 0.3s ease;
+            list-style: none;
+            margin: 0;
+            text-align: left;
+        }
+
+        .point-box:hover {
+            transform: translateY(-5px); /* Efek naik saat di-hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .point-box strong {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: var(--color-secondary);
+        }
+        
+        /* --------------------------------- */
+        /* 4. STYLING LANGKAH-LANGKAH (ORDERED LIST) */
+        /* --------------------------------- */
+        .numbered-steps {
+            list-style: none;
+            padding: 0;
+        }
+
+        .numbered-steps li {
+            background-color: #fff;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .numbered-steps li::before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            background-color: var(--color-accent); /* Warna Hijau untuk nomor */
+            color: white;
+            font-weight: 700;
+            font-size: 1.2em;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        /* Menggunakan counter untuk penomoran langkah */
+        .numbered-steps {
+            counter-reset: step-counter;
+        }
+
+        /* --------------------------------- */
+        /* 5. RESPONSIVE DESIGN (Untuk tampilan HP) */
+        /* --------------------------------- */
+        @media (max-width: 600px) {
+            .point-grid {
+                grid-template-columns: 1fr; /* Kembali ke satu kolom di layar kecil */
+            }
+            .article-container {
+                padding: 20px;
+                margin: 20px auto;
+            }
+        }
+
+        /* --------------------------------- */
+        /* 6. KOTAK KOMENTAR */
+        /* --------------------------------- */
+        .komentar {
+            margin-top: 50px;
+            padding: 25px;
+            background-color: var(--color-light);
+            border-radius: 10px;
+            border: 1px solid #dee2e6;
+            text-align: center;
+            font-size: 1.05em;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="article-container">
+
+    <h1>Mengubah Stigma 'Anak Nakal' Menjadi 'Anak Penuh Inisiatif'</h1>
+
+    <p>Kita semua punya label, dan tidak semua label itu menyenangkan. Dulu, saya sering dicap sebagai <strong>"anak yang terlalu aktif"</strong>—dengan penekanan yang berlebihan pada kata "terlalu."</p>
+
+    <p>Mungkin banyak yang melihat saya sebagai sosok yang *eksplosif*. Saya akui, energi saya dulu sering disalurkan ke tempat yang salah, terutama <strong>di luar gerbang sekolah</strong>. Di dalam lingkungan sekolah, saya relatif terkontrol, meskipun sesekali dorongan untuk terlibat dalam konflik juga muncul.</p>
+
+    <p>Saya ingat satu momen ketika saya terlibat dalam perkelahian dengan kelas sebelah, dan akhirnya berujung pada pemanggilan orang tua. Itu adalah alarm keras pertama. Namun, ada juga kejadian di mana saya terlibat perkelahian antar sekolah, dan entah mengapa, saya <strong>tidak pernah tertangkap</strong>. Anehnya, dari semua yang terlibat, tidak ada satu pun yang berani menyebut nama saya.</p>
+
+    <p>Hal ini menyadarkan saya pada dua hal:</p>
+    
+    <div class="point-grid">
+        <div class="point-box">
+            <strong>Potensi Saya untuk Mengontrol Lingkungan</strong>
+            <p>Jika saya bisa mengontrol situasi dan orang di sekitar saya bahkan dalam kondisi chaos (seperti perkelahian), bayangkan apa yang bisa saya lakukan jika kemampuan itu saya salurkan untuk hal positif dan strategis.</p>
+        </div>
+        <div class="point-box">
+            <strong>Energi Saya Hanya Disalurkan ke Tempat yang Salah</strong>
+            <p>Kenakalan saya sebenarnya adalah energi besar dan kemampuan berstrategi yang belum menemukan saluran yang tepat. Itu bukan niat jahat; itu adalah kelebihan energi yang keliru diarahkan.</p>
+        </div>
+    </div>
+    <h2>Tiga Langkah Mengubah Energi Liar Menjadi Kekuatan</h2>
+
+    <p>Proses mengubah stigma tidak terjadi dalam semalam. Saya mulai dengan berfokus mengubah energi "nakal" menjadi <strong>inisiatif konstruktif</strong>:</p>
+
+    <ol class="numbered-steps">
+        <li>
+            <div>
+                <strong>Mengakui Kekuatan, Bukan Hanya Kesalahan:</strong> Daripada fokus pada "Saya nakal," saya mulai fokus pada, "Saya punya energi dan kemampuan berstrategi yang tinggi." Saya memutuskan bahwa keterampilan saya untuk "tidak terdeteksi" dan kemampuan saya untuk berhadapan dengan konflik harus diubah menjadi kemampuan untuk memimpin dan memediasi.
+            </div>
+        </li>
+        <li>
+            <div>
+                <strong>Menemukan Saluran yang Tepat:</strong> Saya menemukan wadah positif melalui <strong>Silat</strong> dan <strong>OSIS</strong>. Silat mengajarkan disiplin fisik dan mental (mengendalikan dorongan sesaat), sementara OSIS memberikan tanggung jawab untuk memimpin dan menggunakan kemampuan berstrategi saya dalam merancang program sekolah.
+            </div>
+        </li>
+        <li>
+            <div>
+                <strong>Tunjukkan, Bukan Ceritakan:</strong> Perubahan saya tidak hanya diucapkan, tetapi ditunjukkan. Kegagalan di O2SN Silat memaksa saya untuk latihan lebih keras, bukan menghindar. Dan terpilihnya saya sebagai Ketua OSIS membuktikan bahwa energi yang dulu disebut "nakal" kini telah diakui sebagai inisiatif dan potensi kepemimpinan.
+            </div>
+        </li>
+    </ol>
+
+    <p>Jika saat ini Anda sedang berjuang dengan energi besar yang sering disalahartikan atau dilabeli secara negatif, ingatlah: <strong>Energi adalah aset, bukan beban.</strong> Ubah kemampuan Anda untuk membuat *chaos* menjadi kemampuan untuk <strong>menciptakan perubahan</strong>. Gunakan strategi dan *skill* Anda untuk memimpin, bukan melawan.</p>
+
+    <div class="komentar">
+        <p><strong>Apa *superpower* unik Anda yang dulu sering dianggap sebagai kelemahan, dan bagaimana Anda sekarang menggunakannya untuk hal positif? Mari berbagi di kolom komentar!</strong></p>
+    </div>
+
+</div>
+
+</body>
+</html>
